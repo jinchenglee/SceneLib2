@@ -61,8 +61,8 @@ UsbCamGrabber::~UsbCamGrabber()
 void UsbCamGrabber::Init(const string &uri, FrameGrabber *frame_grabber)
 {
   video_              = new pangolin::VideoInput(uri);
-  video_format_       = new pangolin::VideoPixelFormat;
-  *video_format_      = pangolin::VideoFormatFromString(video_->PixFormat());
+  video_format_       = new pangolin::PixelFormat;
+  *video_format_      = pangolin::PixelFormat(video_->PixFormat());
   video_width_        = video_->Width();
   video_height_       = video_->Height();
 

@@ -64,7 +64,7 @@ class UsbCamGrabber {
   FrameGrabber  *frame_grabber_;
 
   pangolin::VideoInput  *video_;
-  pangolin::VideoPixelFormat  *video_format_;
+  pangolin::PixelFormat  *video_format_;
   int video_width_;
   int video_height_;
 };
